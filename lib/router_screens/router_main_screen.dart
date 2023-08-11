@@ -15,13 +15,19 @@ class RouterMainScreen extends StatelessWidget {
         body: Center(
           widthFactor: 300,
           child: ListView.separated(
-            itemCount: 3,
+            itemCount: 4,
             itemBuilder: (context, index) {
               return ElevatedButton(
                 style: const ButtonStyle(
                   alignment: Alignment.center,
                 ),
-                onPressed: () => context.push('/page1'),
+                onPressed: () {
+                  if (index == 2) {
+                    context.goNamed('page${index + 1}name');
+                  } else {
+                    context.push('/page${index + 1}');
+                  }
+                },
                 child: Text('버튼${index + 1}'),
               );
             },
