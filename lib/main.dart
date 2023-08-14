@@ -19,6 +19,9 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
+  // INFO : go_router_builder 사용
+  // final _router = GoRouter(routes: $appRoutes);
+
   final GoRouter _router = GoRouter(
     initialLocation: '/', // 디폴트 페이지.
     routes: <RouteBase>[
@@ -83,8 +86,6 @@ class MyApp extends StatelessWidget {
     errorBuilder: (context, state) => const ErrorPage(),
   );
 
-  //
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
@@ -102,6 +103,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// INFO : go_router_builder 사용
 @TypedGoRoute<Page5Route>(
   path: '/',
   routes: <TypedGoRoute<GoRouteData>>[

@@ -13,7 +13,7 @@ class Page1Screen extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           child: const Text('나는 페이지1이다.'),
-          onPressed: () => context.replace('/page1/person1'),
+          onPressed: () => context.push('/page1/person1'),
         ),
       ),
     );

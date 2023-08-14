@@ -26,6 +26,7 @@ class RouterMainScreen extends StatelessWidget {
                   if (index == 2) {
                     context.goNamed('page3name');
                   } else if (index == 4) {
+                    // INFO : go_router_builder 사용
                     const Page5Route().go(context);
                   } else {
                     context.push('/page${index + 1}');
