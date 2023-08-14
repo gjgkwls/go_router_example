@@ -24,7 +24,7 @@ class Page2Screen extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () =>
-                  context.go('/page2/person2/${myController.text}'),
+                  context.push('/page2/person2/${myController.text}'),
               child: const Text('입력완료~'),
             ),
           ],

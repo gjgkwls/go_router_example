@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:go_router_example/main.dart';
 
 class RouterMainScreen extends StatelessWidget {
   const RouterMainScreen({super.key});
@@ -15,7 +16,7 @@ class RouterMainScreen extends StatelessWidget {
         body: Center(
           widthFactor: 300,
           child: ListView.separated(
-            itemCount: 4,
+            itemCount: 5,
             itemBuilder: (context, index) {
               return ElevatedButton(
                 style: const ButtonStyle(
@@ -23,7 +24,9 @@ class RouterMainScreen extends StatelessWidget {
                 ),
                 onPressed: () {
                   if (index == 2) {
-                    context.goNamed('page${index + 1}name');
+                    context.goNamed('page3name');
+                  } else if (index == 4) {
+                    const Page5Route().go(context);
                   } else {
                     context.push('/page${index + 1}');
                   }

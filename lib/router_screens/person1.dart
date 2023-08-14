@@ -15,21 +15,21 @@ class Person1Screen extends StatelessWidget {
           children: [
             ElevatedButton(
               child: const Text(
-                '분홍색 사람1',
+                '분홍색 사람 (go)',
               ),
-              onPressed: () => context.push('/page1/person1/pink'),
+              onPressed: () => context.go('/page1/person1/pink'),
             ),
             ElevatedButton(
               child: const Text(
-                '보라색 사람1',
+                '보라색 사람 (push)',
               ),
               onPressed: () => context.push('/page1/person1/purple'),
             ),
             ElevatedButton(
               child: const Text(
-                '오렌지색 사람1',
+                '오렌지색 사람 (replace)',
               ),
-              onPressed: () => context.push('/page1/person1/orange'),
+              onPressed: () => context.replace('/page1/person1/orange'),
             ),
           ],
         ),

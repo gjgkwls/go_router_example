@@ -6,7 +6,6 @@ class Page1Screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final router = GoRouter.of(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('페이지1'),
@@ -14,7 +13,7 @@ class Page1Screen extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           child: const Text('나는 페이지1이다.'),
-          onPressed: () => context.go('/page1/person1'),
+          onPressed: () => context.replace('/page1/person1'),
         ),
       ),
     );
